@@ -60,7 +60,7 @@ contexts:
     - match: \b(class)\s+(?=func)
       scope: meta.function storage.type.function
     # types that have a parent class
-    - match: \b(enum|class|protocol|extension)\s+((\w+)\s*(:)\s+(\w+))
+    - match: \b(enum|class|protocol|extension|struct)\s+((\w+)\s*(:)\s+(\w+))
       scope: entity.name.type
       captures:
         1: keyword.entity
@@ -69,20 +69,7 @@ contexts:
         4: keyword.operator
         5: support.class
     # types that don't need a parent class
-    - match: \b(enum|class|protocol|extension)\s+(\w+)
-      scope: entity.name.type
-      captures:
-        1: keyword.entity
-        2: entity.name.type support.class
-    # types that *cannot* have a parent class (but DO)
-    - match: '\b(struct)\s+(\w+)\s+(:.*)'
-      scope: entity.name.type
-      captures:
-        1: keyword.entity
-        2: entity.name.type support.class
-        3: invalid
-    # types that *cannot* have a parent class (and do not)
-    - match: \b(struct)\s+(\w+)
+    - match: \b(enum|class|protocol|extension|struct)\s+(\w+)
       scope: entity.name.type
       captures:
         1: keyword.entity

@@ -138,9 +138,10 @@ enum Foo : Bar {}
 struct Foo
 // <- keyword.entity
 //     ^ support.class
-struct Foo : Bar
-//         ^ invalid
-//           ^ invalid
+struct Foo : Bar {}
+// <- keyword.entity
+//      ^ support.class
+//            ^ support.class
 class Foo
 // <- keyword.entity
 //    ^ support.class
