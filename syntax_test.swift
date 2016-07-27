@@ -186,6 +186,10 @@ func foo(a, b: String) { foo }
 // <- string
 // <- string.quoted
 
+".foo"
+// <- string
+// <- string.quoted
+
 "foo\"" foo
 // <- string
 //  ^ constant.character.escape

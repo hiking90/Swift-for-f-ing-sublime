@@ -27,6 +27,9 @@ contexts:
       captures:
        1: punctuation.definition.preprocessor
        2: meta.preprocessor.c
+###################################################### STRING
+    - match: '"'
+      push: string_double
 ###################################################### ENUMS
     - match: "(?:[^\\?\\!\\)\\w]|^)\\.([a-zA-Z]\\w*)(?=\\()"
       captures:
@@ -92,9 +95,6 @@ contexts:
     - match: \b(var|let|typealias|unowned)\b
       captures:
         1: keyword.variable
-###################################################### STRING
-    - match: '"'
-      push: string_double
 ###################################################### MODIFIERS
     - match: \b(weak|lazy|convenience|public|internal|private|final|static|override|required|prefix|postfix|infix)\b
       scope: storage.modifier
