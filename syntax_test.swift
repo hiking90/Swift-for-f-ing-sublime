@@ -32,29 +32,27 @@ nil
 
 1.1  100.001
 // <- constant.numeric
-// <- constant.numeric.float
 //   ^ constant.numeric
 //  ^ source.swift
 100
 // <- constant.numeric
-// <- constant.numeric.decimal
 1_000_000
-//   ^ constant.numeric.decimal
+//   ^ constant.numeric
 0xDEADBEEF
-// <- constant.numeric.hexadecimal
-//  ^ constant.numeric.hexadecimal
+// <- constant.numeric
+//  ^ constant.numeric
 0xGGGGG
-//  ^ -constant.numeric.hexadecimal
+//  ^ -constant.numeric
 0o12345670
-// <- constant.numeric.octal
-//  ^ constant.numeric.octal
+// <- constant.numeric
+//  ^ constant.numeric
 0o8888
-//  ^ -constant.numeric.octal
+//  ^ -constant.numeric
 0b01010110101
-// <- constant.numeric.binary
-//  ^ constant.numeric.binary
+// <- constant.numeric
+//  ^ constant.numeric
 0b22222
-//  ^ -constant.numeric.binary
+//  ^ -constant.numeric
 
 if { /**/ }
 // <- keyword.control
@@ -93,7 +91,7 @@ enum Foo { case Value }
 //   ^ entity.name.type
 enum Foo : String { case Value }
 // <- keyword.entity
-//   ^ support.class
+//   ^ meta.type
 //   ^ entity.name.type
 //         ^ support.class
 
